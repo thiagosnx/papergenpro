@@ -9,7 +9,7 @@
   <div class="row w-100">
     <div class="col-lg-6 col-md-12 d-flex align-items-start justify-content-start mb-4 mb-lg-0">
       <img src="/static/storage/certidao/example.png"
-           class="img-fluid w-75 rounded" alt="Imagem de exemplo do Documento">
+           class="img-fluid w-75 rounded" alt="Trabalho em Normas ABNT">
     </div>
     <div class="col-lg-6 col-md-12 d-flex justify-content-start text-start">
       <div class="w-100">
@@ -18,49 +18,31 @@
             <span class="preco-antigo">R$ 19,90</span>
             <span class="preco-novo">R$ 7,90</span>
         </div>
-        <p style="font-size: 12px;" class="mb-0 text-secondary">*Documentos gerados na hora após o preenchimento, fique na página!</p>
-        <p style="font-size: 12px;" class="mb-4 text-secondary">*Outros temas disponíveis, esta é somente uma imagem de exemplo.</p>
+        <p style="font-size: 12px;" class="mb-0 text-secondary"><span class="text-danger">*</span> Documento disponibilizado na hora para o download.</p>
+        <p style="font-size: 12px;" class="mb-4 text-secondary"><span class="text-danger">*</span> Preencher todas as informações ajuda a criar o melhor trabalho possível.</p>
         <form method="post">
           {% csrf_token %}
-          <div class="mb-3">
-            <label for="nm_bb" class="form-label">Nome Completo do Bebê *</label>
-            <input type="text" id="nm_bb" name="nm_bb" class="form-control" required>
-          </div>
-          <div class="mb-3 d-flex w-100 gap-2">
-            <div class="d-flex flex-column w-100">
-              <label for="dt_nasc" class="form-label">Data de Nascimento *</label>
-              <input type="date" id="dt_nasc" name="dt_nasc" class="form-control" required>
+            <div class="mb-3">
+                <label for="curso" class="form-label">Curso *</label>
+                <input type="text" id="curso" name="curso" class="form-control" placeholder="História" required>
             </div>
-            <div class="d-flex flex-column w-100">
-              <label for="hr_nasc" class="form-label">Hora do Nascimento</label>
-              <input type="time" id="hr_nasc" name="hr_nasc" class="form-control" required>
+            <div class="mb-3 d-flex w-100 gap-2">
+                <div class="d-flex flex-column w-100">
+                    <label for="materia" class="form-label">Matéria *</label>
+                    <input type="text" id="materia" name="materia" class="form-control" placeholder="História" required>
+                </div>
+                <div class="d-flex flex-column w-100">
+                    <label for="tema" class="form-label">Tema do Trabalho *</label>
+                    <input type="text" id="tema" name="tema" class="form-control" placeholder="Revolução Industrial" required>
+                </div>
             </div>
-          </div>
           <div class="mb-3">
-            <label for="loc_nasc" class="form-label">Local de Nascimento *</label>
-            <input type="text" id="loc_nasc" name="loc_nasc" class="form-control" required>
+            <label for="complemento" class="form-label">Explique o que precisa no trabalho (opcional)</label>
+            <textarea name="complemento" id="complemento" class="form-control" placeholder="Trabalho focado em Napoleão Bonaparte..."></textarea>
           </div>
-          <div class="mb-3">
-            <label for="gen" class="form-label">Gênero *</label>
-            <select class="form-control" name="gen" id="gen" required>
-              <option value="">Selecione</option>
-              <option value="Homem cisgênero">Homem cisgênero</option>
-              <option value="Homem transgênero">Homem transgênero</option>
-              <option value="Mulher cisgênero">Mulher cisgênero</option>
-              <option value="Mulher trasgênero">Mulher trasgênero</option>
-              <option value="Não binário">Não binário</option>
-              <option value="Outro">Outro</option>
-            </select>
+          <div class="w-100 d-flex justify-content-start">
+              <button type="submit" class="btn btn-primary">Gerar</button>
           </div>
-          <div class="mb-3">
-            <label for="nm_mae" class="form-label">Nome Completo da Mãe</label>
-            <input type="text" id="nm_mae" name="nm_mae" class="form-control">
-          </div>
-          <div class="mb-3">
-            <label for="nm_pai" class="form-label">Nome Completo do Pai</label>
-            <input type="text" id="nm_pai" name="nm_pai" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-primary">Ir para o pagamento seguro</button>
         </form>
       </div>
     </div>
