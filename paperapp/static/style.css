@@ -179,6 +179,12 @@
   a{
     text-decoration: none;
   }
-  
+  .btn-primary{
+    background-color: var(--main-blue) !important;
+  }
+
+  .text-primary{
+    color: var(--main-blue) !important;
+  }
 
   
